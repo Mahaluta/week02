@@ -26,13 +26,12 @@ namespace CheckIfAWordIsPalindrome
         {
             Console.WriteLine("Read a string to see if it's a palindrome: ");
             string pali = Console.ReadLine();
-            if (isPalindrome(pali) == true)
-                Console.WriteLine("The word '" + pali + "' is a palindrome.");
-            else
-                Console.WriteLine("The word '" + pali + "' is not a palindrome.");
 
+            Console.WriteLine(isPalindrome(pali)
+               ? "The word '" + pali + "' is a palindrome."
+               : "The word '" + pali + "' is not a palindrome.");
 
-
+            
             Console.ReadKey();
         }
     }
