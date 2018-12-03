@@ -10,9 +10,9 @@ namespace RemoveDuplicatesLinkedList
     class Program
 
     {
-        public static void AddToLinkedListAfter(LinkedList<string> lista, string newElement, string afterElement)
+        public static void AddToLinkedListAfter(LinkedList<string> lista, string postElement, string newElement)
         {
-            var position = lista.Find(afterElement);
+            var position = lista.Find(postElement);
             lista.AddAfter(position, newElement);
         }
 
@@ -34,11 +34,11 @@ namespace RemoveDuplicatesLinkedList
             var names = new LinkedList<string>();
             names.AddFirst("Adrian");
             names.AddLast("Marius");
-            AddToLinkedListAfter(names, "Codrin", "Adrian");
-            AddToLinkedListAfter(names, "Alex", "Codrin");
+            AddToLinkedListAfter(names, "Adrian", "Codrin");
             AddToLinkedListAfter(names, "Codrin", "Alex");
-            AddToLinkedListAfter(names, "Daniel", "Codrin");
-            AddToLinkedListAfter(names, "Tudor", "Daniel");
+            AddToLinkedListAfter(names, "Alex", "Codrin");
+            AddToLinkedListAfter(names, "Codrin", "Daniel");
+            AddToLinkedListAfter(names, "Daniel", "Tudor");
 
 
             // Display the list with duplicates
